@@ -84,5 +84,18 @@ return require('packer').startup(function(use)
 
     use("lewis6991/gitsigns.nvim")
 
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use { "tpope/vim-commentary" }
+    use {'kevinhwang91/nvim-bqf', ft = 'qf'}
+
+    -- optional
+    use {'junegunn/fzf', run = function()
+      vim.fn['fzf#install']()
+    end
+    }
+    use({
+      'Wansmer/treesj',
+      requires = { 'nvim-treesitter/nvim-treesitter' },
+    })
   end)
 
