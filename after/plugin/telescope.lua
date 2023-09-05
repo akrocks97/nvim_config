@@ -7,6 +7,7 @@ end)
 vim.keymap.set("n", '<leader>ts', builtin.treesitter, {})
 vim.keymap.set("n", '<leader>lg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+vim.keymap.set('n', 'tl', builtin.buffers, {})
 
 function search_word_and_populate_quickfix()
     local word_under_cursor = vim.fn.expand("<cword>")
