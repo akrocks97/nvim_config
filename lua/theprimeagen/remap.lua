@@ -45,7 +45,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", {de
 
 vim.keymap.set("n", "tn", ":tabnext<CR>", {desc="[T]ab [N]ext"})
 vim.keymap.set("n", "tp", ":tabprev<CR>", {desc="[T]ab [P]rev"})
-vim.keymap.set("n", "<C-n>", ":NERDTreeToggle<CR>", {desc="NERD Tree Toggle"})
+vim.keymap.set("n", "<leader><C-n>", ":NERDTreeToggle<CR>", {desc="NERD Tree Toggle"})
 
 
 -- Remaps to open and close the qflist
