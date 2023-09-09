@@ -63,3 +63,9 @@ end
 
 vim.keymap.set("n", "<leader>frw", ":lua live_grep_word()<CR>", {desc='[F]ind [R]ipgrep [W]ord'})
 
+vim.api.nvim_create_user_command('Test', 'echo "It works!"', {})
+
+vim.api.nvim_create_user_command('Q', function()
+  vim.cmd(" mksession! .vscode/session.vim")
+  vim.cmd(" qa")
+end, {})
