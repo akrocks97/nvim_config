@@ -97,5 +97,7 @@ return require('packer').startup(function(use)
       'Wansmer/treesj',
       requires = { 'nvim-treesitter/nvim-treesitter' },
     })
+    use {'preservim/nerdtree'}
+    use {'ThePrimeagen/vim-be-good'}
   end)
 
