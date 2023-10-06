@@ -6,3 +6,5 @@ vim.keymap.set('n', '<leader>m', tsj.toggle)
 vim.keymap.set('n', '<leader>M', function()
     tsj.toggle({ split = { recursive = true } })
 end)
+
+tsj.setup()

@@ -37,7 +37,7 @@ vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", {desc="cnext"})
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", {desc="[M]ake [R]ain"});
+-- vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", {desc="[M]ake [R]ain"});
 
 -- vim.keymap.set("n", "<leader><leader>", function()
 --     vim.cmd("so")
