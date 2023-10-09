@@ -8,7 +8,14 @@ require('catppuccin').setup( {
   term_colors = true
 })
 
-vim.cmd.colorscheme("catppuccin-mocha")
+require('onedark').setup {
+  style = 'dark',
+  transparent = true,
+  term_colors = true,
+}
+require('onedark').load()
+
+vim.cmd.colorscheme("onedark")
 
 function ColorMyPencils(color)
   color = color or "catppuccin-mocha"
@@ -19,4 +26,4 @@ function ColorMyPencils(color)
 
 end
 
-ColorMyPencils("catppuccin-mocha")
+ColorMyPencils("onedark")

@@ -20,6 +20,16 @@ require'nvim-treesitter.configs'.setup {
       },
 
     },
+    
+    lsp_interop = {
+      enable = true,
+      border = 'rounded',
+      floating_preview_opts = {},
+      peek_definition_code = {
+        ["<leader>df"] = "@function.outer",
+        ["<leader>dF"] = "@class.outer",
+      },
+    },
     -- swaps
     swap = {
       enable = true,

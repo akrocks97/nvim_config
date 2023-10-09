@@ -106,5 +106,7 @@ return require('packer').startup(function(use)
   use {'preservim/nerdtree'}
   use {'ThePrimeagen/vim-be-good'}
   use {'vimwiki/vimwiki'}
+  use {'navarasu/onedark.nvim'}
+  use {'vim-scripts/DoxygenToolkit.vim'}
   end)
 
