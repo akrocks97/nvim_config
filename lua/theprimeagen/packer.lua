@@ -108,5 +108,8 @@ return require('packer').startup(function(use)
   use {'vimwiki/vimwiki'}
   use {'navarasu/onedark.nvim'}
   use {'vim-scripts/DoxygenToolkit.vim'}
+  use {
+    'fei6409/log-highlight.nvim',
+  }
   end)
 
