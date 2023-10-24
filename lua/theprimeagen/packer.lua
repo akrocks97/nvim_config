@@ -10,18 +10,24 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+      { 'nvim-lua/plenary.nvim' },
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+    },
+    -- config = function()
+    --   require("telescope").load_extension("live_grep_args")
+    -- end
   }
 
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-      vim.cmd('colorscheme rose-pine-moon')
-    end
-  })
+  -- use({
+  --   'rose-pine/neovim',
+  --   as = 'rose-pine',
+  --   config = function()
+  --     vim.cmd('colorscheme rose-pine-moon')
+  --   end
+  -- })
 
   -- use({
   --   "folke/trouble.nvim",
@@ -81,8 +87,6 @@ return require('packer').startup(function(use)
   -- use("github/copilot.vim")
   -- use("eandrju/cellular-automaton.nvim")
   -- use("laytan/cloak.nvim")
-  use("vim-airline/vim-airline")
-  use('vim-airline/vim-airline-themes')
   use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
@@ -110,6 +114,12 @@ return require('packer').startup(function(use)
   use {'vim-scripts/DoxygenToolkit.vim'}
   use {
     'fei6409/log-highlight.nvim',
+  }
+  use {'tpope/vim-surround'}
+  use {'ThePrimeagen/git-worktree.nvim'}
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   end)
 

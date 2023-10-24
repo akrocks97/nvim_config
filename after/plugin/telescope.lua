@@ -8,6 +8,7 @@ vim.keymap.set('n', '<leader>ps', function()
 end, { desc = '[P]roject [S]earch'})
 vim.keymap.set("n", '<leader>ts', builtin.treesitter, {desc='[T]ree[S]itter'})
 vim.keymap.set("n", '<leader>lg', builtin.live_grep, {desc='[L]ive[G]rep'})
+vim.keymap.set("n", '<leader>lag', require("telescope").extensions.live_grep_args.live_grep_args, {desc='[L]ive[A]rgs[G]rep'})
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {desc='[V]im [H]elp'})
 vim.keymap.set('n', '<leader>tl', builtin.buffers, {desc='[T]ab [L]ist'})
 
@@ -39,7 +40,8 @@ require('telescope').setup {
     layout_strategy = 'vertical'
   }
 }
-  -- To get fzf loaded and working with telescope, you need to call
-  -- load_extension, somewhere after setup function:
-  require('telescope').load_extension('fzf')
-
+-- To get fzf loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+require('telescope').load_extension('fzf')
+require("telescope").load_extension("live_grep_args")
+require("telescope").load_extension("git_worktree")

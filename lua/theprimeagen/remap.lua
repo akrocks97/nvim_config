@@ -10,6 +10,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "]]", "]]zz")
+vim.keymap.set("n", "[[", "]]zz")
 
 
 -- greatest remap ever
@@ -28,8 +30,8 @@ vim.keymap.set("n", "Q", "<nop>")
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 -- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
-vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz", {desc="cprev"})
-vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", {desc="cnext"})
+-- vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz", {desc="cprev"})
+-- vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz", {desc="cnext"})
 -- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 -- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
@@ -69,3 +71,12 @@ vim.api.nvim_create_user_command('Q', function()
   vim.cmd(" mksession! .vscode/session.vim")
   vim.cmd(" qa")
 end, {})
+
+
+function insert_prqa_supress()
+    vim.api.nvim_feedkeys('$a /* PRQA S */', 'n', true)
+end
+
+vim.keymap.set("n", "<leader>pq", ":lua insert_prqa_supress()<CR>", {desc='[P]rqa [S]upress'})
+
+
